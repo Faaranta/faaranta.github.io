@@ -3,5 +3,13 @@
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+ <span id="tort"></span>
 </body>
 </html>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const birthdate = urlParams.get('tort');
+    document.getElementById("tort").innerHTML = tort;
+</script>

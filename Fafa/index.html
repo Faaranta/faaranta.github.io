@@ -183,6 +183,7 @@ $to = $_GET['to'];
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h1>Fatma & Agik</h1>
 						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i</p>
+						<span id="kepada"></span>
 
 						<p>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
 
@@ -939,6 +940,14 @@ $to = $_GET['to'];
 
 	// Since we are using dynamic mode, we need to programmatically open lightGallery
 	inlineGallery.openGallery();
+</script>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const birthdate = urlParams.get('kepada');
+    const pdflink = urlParams.get('pdflink');
+    document.getElementById("kepada").innerHTML = kepada;
 </script>
 
 </body>
